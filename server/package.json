@@ -7,7 +7,7 @@
   "scripts": {
     "testStart": "cross-env NODE_ENV=test node index.js",
     "devStart": "cross-env NODE_ENV=development nodemon index.js",
-    "test": "cross-env mocha *.test.js"
+    "test": "mocha *.test.js"
   },
   "keywords": [],
   "author": "",

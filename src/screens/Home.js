@@ -48,7 +48,14 @@ function Home() {
 
   return (
     <div id="container">
-      <h3>Todos</h3>
+      <h2>Todos</h2>
+
+      <ul>
+        {tasks.map(item => (
+          <Row key={item.id} item={item} deleteTask={deleteTask} />
+        ))}
+      </ul>
+
       <form>
         <input
           placeholder="Add new task"
@@ -62,11 +69,7 @@ function Home() {
           }}
         />
       </form>
-      <ul>
-        {tasks.map(item => (
-          <Row key={item.id} item={item} deleteTask={deleteTask} />
-        ))}
-      </ul>
+
     </div>
   );
 }

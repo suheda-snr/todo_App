@@ -1,0 +1,53 @@
+/* Container for the authentication form */
+.authContainer {
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    margin: 0 auto;
+    background-color: #f6f9fe;
+}
+
+/* Title for the form */
+.authContainer h3 {
+    font-size: 24px;
+}
+
+/* Style for form fields */
+.authContainer input {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-top: 15px;
+    /* Space between inputs */
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+/* Style for the submit button */
+.authContainer button {
+    background-color: #4da6ff;
+    border: 2px solid #ccc;
+    color: black;
+    border: none;
+    padding: 8px 80px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+.authContainer button:hover {
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.authContainer a {
+    color: #070707;
+    text-decoration: none;
+}
+
+.authContainer a:hover {
+    text-decoration: underline;
+}

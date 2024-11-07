@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import './Authentication.css';
+import classes from './Authentication.module.css';
 import React from 'react';
 import { useUser } from "../contexts/useUser";
 import { useNavigate } from "react-router-dom";
@@ -30,16 +30,14 @@ export default function Authentication({ authenticationMode }) {
     }
 
     return (
-        <div>
+        <div className={classes.authContainer}>
             <h3>{authenticationMode === AuthenticationMode.Login ? 'Sign in' : 'Sign up'}</h3>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label>Email</label>
-                    <input type='email' value={user.email} onChange={e => setUser({ ...user, email: e.target.value })} />
+                    <input type='email' value={user.email} onChange={e => setUser({ ...user, email: e.target.value })} placeholder="Email" />
                 </div>
                 <div>
-                    <label>Password</label>
-                    <input type='password' value={user.password} onChange={e => setUser({ ...user, password: e.target.value })} />
+                    <input type='password' value={user.password} onChange={e => setUser({ ...user, password: e.target.value })} placeholder="Password" />
                 </div>
                 <div>
                     <button>{authenticationMode === AuthenticationMode.Login ? 'Login' : 'Submit'}</button>
