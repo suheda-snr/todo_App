@@ -12,8 +12,6 @@ const openDb = () => {
         host: process.env.DB_HOST,
         // development environment 
         database: process.env.NODE_ENV === 'development' ? process.env.DB_NAME : process.env.TEST_DB_NAME,
-        // test environment to run test
-        //database: process.env.NODE_ENV === 'test' ? process.env.TEST_DB_NAME : process.env.DB_NAME,
         password: process.env.DB_PASSWORD,
         port: process.env.DB_PORT,
     })
